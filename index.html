@@ -147,6 +147,8 @@ section + section { border-top: 1px solid var(--line) }
 
 .contact { display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px }
 .contact > * { min-width: 0 }
+.book { margin-top: 24px; padding: 20px; background: var(--accent-soft); border-radius: 12px; display: grid; gap: 12px; justify-items: start }
+.book p { font-size: .95rem }
 .channels { display: grid; gap: 14px; margin-top: 20px }
 .channels div { display: grid; gap: 2px }
 .channels span { font-size: .8rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em }
@@ -218,7 +220,7 @@ footer .wrap { padding-block: 28px; display: flex; justify-content: space-betwee
       <h1 data-i18n="heroTitle">Kendi dilinizde, ekranın öbür ucunda güvenli bir alan.</h1>
       <p class="lead" data-i18n="heroLead">Ergen ve yetişkinlerle görüntülü online terapi. Yol ve trafik derdi olmadan, nerede olursanız olun evinizin rahatlığından.</p>
       <div class="cta">
-        <a class="btn primary" href="#iletisim" data-i18n="cta1">Ön görüşme isteyin</a>
+        <a class="btn primary" href="https://calendar.app.google/952AbpTUD8zhTBvq5" target="_blank" rel="noopener" data-i18n="cta1">Ön görüşme için saat seçin</a>
         <a class="btn ghost" href="#nasil" data-i18n="cta2">Online seans nasıl işler?</a>
       </div>
     </div>
@@ -368,6 +370,10 @@ footer .wrap { padding-block: 28px; display: flex; justify-content: space-betwee
       <div>
         <div class="sec-head"><p class="eyebrow" data-i18n="ctEyebrow">İletişim</p><h2 data-i18n="ctTitle">İlk adımı atmak için kısa bir mesaj yeterli.</h2></div>
         <p class="read" style="color:var(--muted)" data-i18n="ctLead">Mesajlarınıza genellikle bir iş günü içinde dönüş yapılır.</p>
+        <div class="book">
+          <p data-i18n="bookNote">Ücretsiz 10 dakikalık ön görüşme için takvimden size uygun saati hemen seçebilirsiniz. Görüşme bağlantısı e-postanıza gelir.</p>
+          <a class="btn primary" href="https://calendar.app.google/952AbpTUD8zhTBvq5" target="_blank" rel="noopener" data-i18n="bookBtn">Takvimden saat seçin</a>
+        </div>
         <div class="channels">
           <div><span data-i18n="chMail">E-posta</span><b>sibeltanriverdi91@gmail.com</b></div>
           <div><span>Instagram</span><a href="https://www.instagram.com/psikologsibeltanriverdi/" target="_blank" rel="noopener"><b>@psikologsibeltanriverdi</b></a></div>
@@ -419,6 +425,7 @@ footer .wrap { padding-block: 28px; display: flex; justify-content: space-betwee
     draft: "Draft preview. Yellow highlights will be filled in with your details.",
     role: "Clinical Psychologist · Online Therapy",
     nav1: "About", nav2: "Services", nav3: "Online sessions", nav4: "Contact",
+    bookNote: "You can pick a time for a free 10-minute first call straight from my calendar. The video link will arrive by email.", bookBtn: "Pick a time",
     navHyp: "Hypnotherapy", navBlog: "Articles", svcMore: "Read more (in Turkish)",
     blogEyebrow: "Articles", blogTitle: "Further reading (in Turkish)", blogAll: "All articles",
     hypEyebrow: "Hypnotherapy", hypTitle: "What is hypnosis and how can it help?",
@@ -435,7 +442,7 @@ footer .wrap { padding-block: 28px; display: flex; justify-content: space-betwee
     heroEyebrow: "Online therapy",
     heroTitle: "A safe space in your own language, on the other side of the screen.",
     heroLead: "Online video therapy for adolescents and adults. No commute, no traffic, from the comfort of your home wherever you are.",
-    cta1: "Request a first call", cta2: "How do online sessions work?",
+    cta1: "Book a free first call", cta2: "How do online sessions work?",
     photo: "Your photo goes here<br>(a portrait in natural light works well)",
     aboutEyebrow: "About", aboutTitle: "Hello, I'm Sibel.",
     about1: "I am Sibel Tanrıverdi, a clinical psychologist. I studied psychology at Beykent University and graduated from the Clinical Psychology master's programme at İstinye University in 2024. Since May 2023 I have been working with adults, adolescents, children and couples, both online and in person.",
