@@ -522,7 +522,7 @@ footer .wrap { padding-block: 28px; display: flex; justify-content: space-betwee
     var body = (lang === "tr" ? "Ad: " : "Name: ") + v("f-name") + "\n" + (lang === "tr" ? "E-posta: " : "Email: ") + v("f-mail") + "\n" + (lang === "tr" ? "Şehir: " : "City: ") + v("f-country") + "\n\n" + v("f-msg");
     document.getElementById("mailto").href = "mailto:sibeltanriverdi91@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
     var btn = this.querySelector("button[type=submit]"); btn.disabled = true;
-    fetch("https://formsubmit.co/ajax/sibeltanriverdi91@gmail.com", {
+    fetch("https://formsubmit.co/ajax/c286218f23fd2e078a5fd45912381701", {
       method: "POST",
       headers: { "Content-Type": "application/json", "Accept": "application/json" },
       body: JSON.stringify({ _subject: subject, _template: "table", _captcha: "false", ad: v("f-name"), email: v("f-mail"), sehir: v("f-country"), mesaj: v("f-msg"), kvkk_onayi: "evet" })
