@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sibeltanriverdi.com/sitemap.xml
