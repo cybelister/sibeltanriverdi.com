@@ -60,6 +60,9 @@
 body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.65; }
 .wrap { max-width: 1040px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
 .read { max-width: 66ch }
+.read h3 { margin-top: 28px; margin-bottom: 8px }
+#hipnoterapi .read p + p { margin-top: 14px }
+.read ul { padding-left: 1.2em; display: grid; gap: 6px }
 h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.15; text-wrap: balance; margin: 0 }
 h2 { font-size: clamp(1.7rem, 3.5vw, 2.3rem) }
 h3 { font-size: 1.25rem; font-weight: 500 }
@@ -182,6 +185,7 @@ footer .wrap { padding-block: 28px; display: flex; justify-content: space-betwee
       <span class="navlinks" style="display:contents">
         <a href="#hakkimda" data-i18n="nav1">Hakkımda</a>
         <a href="#hizmetler" data-i18n="nav2">Hizmetler</a>
+        <a href="#hipnoterapi" data-i18n="navHyp">Hipnoterapi</a>
         <a href="#nasil" data-i18n="nav3">Online seans</a>
         <a href="#iletisim" data-i18n="nav4">İletişim</a>
       </span>
@@ -260,6 +264,32 @@ footer .wrap { padding-block: 28px; display: flex; justify-content: space-betwee
       <article><h3 data-i18n="s23t">Yeme sorunları</h3><p data-i18n="s23d">Duygusal yeme, tıkınırcasına yeme, bitmeyen diyet döngüsü, beden algısı ve yemekle ilişkiyi yeniden kurma.</p></article>
     </div>
     <p class="tz-note" data-i18n="svcNote">Burada adı geçmeyen bir konu için de yazabilirsiniz. Ön görüşmede birlikte çalışmanın size uygun olup olmadığını konuşuruz.</p>
+  </div></section>
+
+  <section id="hipnoterapi"><div class="wrap">
+    <div class="sec-head"><p class="eyebrow" data-i18n="hypEyebrow">Hipnoterapi</p><h2 data-i18n="hypTitle">Hipnoz nedir, nasıl yardımcı olur?</h2></div>
+    <div class="read">
+      <p data-i18n="hyp1">Hipnoz, dikkatin içe yöneldiği, bedenin gevşediği ve zihnin önerilere daha açık hâle geldiği doğal bir odaklanma hâlidir. Bir kitaba dalıp etrafı duymamak ya da uzun bir yolda dalıp gitmek, günlük hayatta yaşadığımız hipnoza yakın deneyimlerdir.</p>
+      <p data-i18n="hyp2">Hipnoterapi, bu hâlin terapötik amaçla, bir terapi planının parçası olarak kullanılmasıdır. Tek başına bir sihirli çözüm değil; diğer terapi yöntemleriyle birlikte, uygun görülen durumlarda kullandığım bir araçtır. Sağlık Bakanlığı onaylı hipnoz uygulama sertifikasına sahibim.</p>
+      <h3 data-i18n="hypH1">Hangi konularda yararlanılabilir?</h3>
+      <ul>
+        <li data-i18n="hypL1">Kaygı, stres ve panik belirtileri</li>
+        <li data-i18n="hypL2">Sınav ve performans kaygısı</li>
+        <li data-i18n="hypL3">Belirli korkular (fobiler)</li>
+        <li data-i18n="hypL4">Uyku sorunları</li>
+        <li data-i18n="hypL5">Kronik ağrı ve migrenle baş etme</li>
+        <li data-i18n="hypL6">Sigarayı bırakma ve alışkanlık değiştirme</li>
+        <li data-i18n="hypL7">Özgüven ve kendine yönelik olumsuz inançlar</li>
+      </ul>
+      <h3 data-i18n="hypH2">Doğru bilinen yanlışlar</h3>
+      <ul>
+        <li data-i18n="hypM1"><b>Kontrolü kaybetmezsiniz.</b> Hipnoz sırasında farkındasınızdır, istemediğiniz hiçbir şeyi yapmazsınız ve dilediğiniz an çıkabilirsiniz.</li>
+        <li data-i18n="hypM2"><b>Uyku değildir.</b> Aksine dikkatin yoğunlaştığı, uyanık bir hâldir.</li>
+        <li data-i18n="hypM3"><b>Sahne hipnozuyla ilgisi yoktur.</b> Hipnoterapi gösteri değil, sizin hedeflerinize göre planlanan bir terapi çalışmasıdır.</li>
+      </ul>
+      <h3 data-i18n="hypH3">Nasıl ilerliyor?</h3>
+      <p data-i18n="hyp3">Önce konuşarak ihtiyacınızı ve hedefinizi belirliyoruz; hipnozun sizin için uygun olup olmadığına birlikte karar veriyoruz. Uygun görülürse seansın bir bölümünde sizi rahatlatıcı bir çalışmayla hipnoz hâline yönlendiriyor, hedefinize yönelik çalışıyor ve ardından yaşadıklarınızı birlikte konuşuyoruz. Bazı psikiyatrik durumlarda hipnoz önerilmez; bu değerlendirme ön görüşmede yapılır.</p>
+    </div>
   </div></section>
 
   <section id="nasil"><div class="wrap">
@@ -361,6 +391,18 @@ footer .wrap { padding-block: 28px; display: flex; justify-content: space-betwee
     draft: "Draft preview. Yellow highlights will be filled in with your details.",
     role: "Clinical Psychologist · Online Therapy",
     nav1: "About", nav2: "Services", nav3: "Online sessions", nav4: "Contact",
+    navHyp: "Hypnotherapy",
+    hypEyebrow: "Hypnotherapy", hypTitle: "What is hypnosis and how can it help?",
+    hyp1: "Hypnosis is a natural state of focus in which attention turns inward, the body relaxes and the mind becomes more open to suggestion. Getting lost in a book or drifting off on a long drive are everyday experiences close to hypnosis.",
+    hyp2: "Hypnotherapy is the use of this state for therapeutic purposes, as part of a therapy plan. It is not a magic solution on its own; it is a tool I use alongside other methods when it is appropriate. I hold a hypnosis practice certificate approved by the Turkish Ministry of Health.",
+    hypH1: "What can it help with?",
+    hypL1: "Anxiety, stress and panic symptoms", hypL2: "Exam and performance anxiety", hypL3: "Specific fears (phobias)", hypL4: "Sleep problems", hypL5: "Coping with chronic pain and migraine", hypL6: "Quitting smoking and changing habits", hypL7: "Self-esteem and negative beliefs about yourself",
+    hypH2: "Common myths",
+    hypM1: "<b>You do not lose control.</b> You stay aware during hypnosis, you will not do anything you do not want to, and you can come out of it whenever you wish.",
+    hypM2: "<b>It is not sleep.</b> It is an alert state of heightened focus.",
+    hypM3: "<b>It has nothing to do with stage hypnosis.</b> Hypnotherapy is not a show but therapeutic work planned around your goals.",
+    hypH3: "How does it work?",
+    hyp3: "First we talk to clarify your needs and goals, and decide together whether hypnosis suits you. If it does, in part of the session I guide you into hypnosis with a relaxing exercise, we work towards your goal, and then we talk through your experience. Hypnosis is not recommended for some psychiatric conditions; this is assessed in the first call.",
     heroEyebrow: "Online therapy",
     heroTitle: "A safe space in your own language, on the other side of the screen.",
     heroLead: "Online video therapy for adolescents and adults. No commute, no traffic, from the comfort of your home wherever you are.",
