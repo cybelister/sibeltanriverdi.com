@@ -530,9 +530,11 @@ footer .wrap { padding-block: 28px; display: flex; justify-content: space-betwee
       if (d && String(d.success) === "false") throw 0;
       document.getElementById("form").reset();
       document.getElementById("formsent").hidden = false;
+      document.getElementById("formsent").scrollIntoView({ block: "center", behavior: "smooth" });
       document.getElementById("formmsg").hidden = true;
     }).catch(function () {
       document.getElementById("formmsg").hidden = false;
+      document.getElementById("formmsg").scrollIntoView({ block: "center", behavior: "smooth" });
     }).then(function () { btn.disabled = false; });
   });
   document.getElementById("copymail").addEventListener("click", function () {
