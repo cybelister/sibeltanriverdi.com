@@ -322,9 +322,8 @@ footer .wrap { padding-block: 28px; display: flex; justify-content: space-betwee
         <p class="formmsg" id="formsent" hidden data-i18n="fSent">Teşekkürler, mesajınız iletildi. En kısa sürede size dönüş yapacağım.</p>
         <p class="formmsg" id="formerr" hidden data-i18n="fErr">Göndermek için adınızı, e-postanızı yazıp onay kutusunu işaretleyin.</p>
         <div class="formmsg mailbox" id="formmsg" hidden>
-          <p data-i18n="fFail">Mesajınız gönderilemedi. Aşağıdaki düğmeyle e-posta uygulamanızda açabilir ya da doğrudan bu adrese yazabilirsiniz:</p>
+          <p data-i18n="fFail">Mesajınız şu anda iletilemedi. Lütfen bana doğrudan bu adresten yazın:</p>
           <p><b id="mailaddr">sibeltanriverdi91@gmail.com</b> <button type="button" class="copy" id="copymail" data-i18n="fCopy">Kopyala</button></p>
-          <a class="btn ghost" id="mailto" href="mailto:sibeltanriverdi91@gmail.com" data-i18n="fOpen">E-posta uygulamasında aç</a>
         </div>
       </form>
     </div>
@@ -427,7 +426,7 @@ footer .wrap { padding-block: 28px; display: flex; justify-content: space-betwee
     fMsg: "Briefly, why you would like support (optional)", fSend: "Send",
     fDraft: "Your message is ready. Use the button below to open it in your email app. If the app does not open, write directly to this address:",
     fSent: "Thank you, your message has been sent. I will get back to you soon.",
-    fFail: "Your message could not be sent. You can open it in your email app with the button below, or write directly to this address:",
+    fFail: "Your message could not be delivered right now. Please write to me directly at this address:",
     fErr: "To send, enter your name and email and tick the consent box.",
     fCopy: "Copy", fOpen: "Open in email app",
     foot: "Information on this site does not replace diagnosis or treatment.",
@@ -520,7 +519,6 @@ footer .wrap { padding-block: 28px; display: flex; justify-content: space-betwee
     if (!ok) return;
     var subject = (lang === "tr" ? "Ön görüşme talebi - " : "First call request - ") + v("f-name");
     var body = (lang === "tr" ? "Ad: " : "Name: ") + v("f-name") + "\n" + (lang === "tr" ? "E-posta: " : "Email: ") + v("f-mail") + "\n" + (lang === "tr" ? "Şehir: " : "City: ") + v("f-country") + "\n\n" + v("f-msg");
-    document.getElementById("mailto").href = "mailto:sibeltanriverdi91@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
     var btn = this.querySelector("button[type=submit]"); btn.disabled = true;
     fetch("https://formsubmit.co/ajax/c286218f23fd2e078a5fd45912381701", {
       method: "POST",
