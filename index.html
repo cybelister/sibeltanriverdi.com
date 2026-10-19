@@ -520,24 +520,20 @@ footer .wrap { padding-block: 28px; display: flex; justify-content: space-betwee
     if (!ok) return;
     var subject = (lang === "tr" ? "Ön görüşme talebi - " : "First call request - ") + v("f-name");
     var body = (lang === "tr" ? "Ad: " : "Name: ") + v("f-name") + "\n" + (lang === "tr" ? "E-posta: " : "Email: ") + v("f-mail") + "\n" + (lang === "tr" ? "Şehir: " : "City: ") + v("f-country") + "\n\n" + v("f-msg");
-    var btn = this.querySelector("button[type=submit]"), label = btn.textContent; btn.disabled = true; btn.textContent = lang === "tr" ? "Gönderiliyor…" : "Sending…";
-    document.getElementById("formsent").hidden = true; document.getElementById("formmsg").hidden = true;
-    var ctrl = window.AbortController ? new AbortController() : null, timer = ctrl && setTimeout(function () { ctrl.abort(); }, 20000);
+    var form = this, data = { _subject: subject, _template: "table", _captcha: "false", ad: v("f-name"), email: v("f-mail"), sehir: v("f-country"), mesaj: v("f-msg"), kvkk_onayi: "evet" };
+    var sent = document.getElementById("formsent"), box = document.getElementById("formmsg");
+    form.reset(); box.hidden = true; sent.hidden = false;
+    sent.scrollIntoView({ block: "center", behavior: "smooth" });
     fetch("https://formsubmit.co/ajax/c286218f23fd2e078a5fd45912381701", {
       method: "POST",
       headers: { "Content-Type": "application/json", "Accept": "application/json" },
-      signal: ctrl ? ctrl.signal : undefined,
-      body: JSON.stringify({ _subject: subject, _template: "table", _captcha: "false", ad: v("f-name"), email: v("f-mail"), sehir: v("f-country"), mesaj: v("f-msg"), kvkk_onayi: "evet" })
+      body: JSON.stringify(data)
     }).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (d) {
       if (d && String(d.success) === "false" && !/activat/i.test(d.message || "")) throw 0;
-      document.getElementById("form").reset();
-      document.getElementById("formsent").hidden = false;
-      document.getElementById("formsent").scrollIntoView({ block: "center", behavior: "smooth" });
-      document.getElementById("formmsg").hidden = true;
     }).catch(function () {
-      document.getElementById("formmsg").hidden = false;
-      document.getElementById("formmsg").scrollIntoView({ block: "center", behavior: "smooth" });
-    }).then(function () { clearTimeout(timer); btn.disabled = false; btn.textContent = label; });
+      sent.hidden = true; box.hidden = false;
+      box.scrollIntoView({ block: "center", behavior: "smooth" });
+    });
   });
   document.getElementById("copymail").addEventListener("click", function () {
     var b = this, addr = document.getElementById("mailaddr");
