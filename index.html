@@ -110,6 +110,11 @@ section + section { border-top: 1px solid var(--line) }
 .services { display: grid; grid-template-columns: repeat(4, 1fr); padding: 1px 0 0 1px }
 .services article { background: var(--surface); border: 1px solid var(--line); margin: -1px 0 0 -1px; padding: 24px; display: grid; gap: 8px; align-content: start }
 .services p { color: var(--muted); font-size: .95rem }
+.services article { position: relative; transition: background .15s }
+.services article:hover { background: var(--accent-soft) }
+.services a.more { font-size: .85rem; font-weight: 600; text-decoration: none; margin-top: 4px }
+.services a.more::after { content: ""; position: absolute; inset: 0 }
+.services a.more::before { content: "→ " }
 
 .steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; counter-reset: s }
 .steps li { counter-increment: s; display: grid; gap: 8px; align-content: start }
@@ -245,29 +250,29 @@ footer .wrap { padding-block: 28px; display: flex; justify-content: space-betwee
   <section id="hizmetler"><div class="wrap">
     <div class="sec-head"><p class="eyebrow" data-i18n="svcEyebrow">Hizmetler</p><h2 data-i18n="svcTitle">Birlikte çalışabileceğimiz konular</h2></div>
     <div class="services">
-      <article><h3 data-i18n="s2t">Kaygı ve panik</h3><p data-i18n="s2d">Yaygın kaygı, panik atak, sağlık kaygısı, sosyal kaygı, belirli korkular (fobiler) ve sürekli bir şey olacakmış gibi hissetmek.</p></article>
-      <article><h3 data-i18n="s3t">Depresyon ve duygudurum</h3><p data-i18n="s3d">İsteksizlik, umutsuzluk, enerji ve keyif kaybı, değersizlik duygusu, duygu dalgalanmaları.</p></article>
-      <article><h3 data-i18n="s4t">Travma ve zor yaşantılar</h3><p data-i18n="s4d">Kaza, kayıp, şiddet ya da çocukluktan gelen zor deneyimlerin bugüne etkisi, travma sonrası stres.</p></article>
-      <article><h3 data-i18n="s5t">Obsesif kompulsif belirtiler</h3><p data-i18n="s5d">Akıldan çıkmayan düşünceler, kontrol etme, temizlik ya da tekrar etme ihtiyacı.</p></article>
-      <article><h3 data-i18n="s17t">Dikkat eksikliği (DEHB)</h3><p data-i18n="s17d">Ergen ve yetişkinlerde odaklanma güçlüğü, erteleme, dağınıklık ve dürtüsellikle baş etme; günlük hayatı düzenleme becerileri. Gerektiğinde psikiyatri ile iş birliği.</p></article>
-      <article><h3 data-i18n="s6t">İlişki sorunları</h3><p data-i18n="s6d">Partner ilişkileri, uzak mesafe ilişkileri, ayrılık ve boşanma süreci, bağlanma ve güven sorunları.</p></article>
-      <article><h3 data-i18n="s18t">Çift terapisi</h3><p data-i18n="s18d">Çiftlerle birlikte yapılan görüşmelerde iletişim sorunları, tekrar eden çatışmalar, güven kırılmaları ve ilişkiyi yeniden yapılandırma.</p></article>
-      <article><h3 data-i18n="s19t">Cinsel sorunlar</h3><p data-i18n="s19d">Cinsel isteksizlik, performans kaygısı, vajinismus, cinsellikle ilgili utanç ve kaygılar.</p></article>
-      <article><h3 data-i18n="s7t">Aile ilişkileri</h3><p data-i18n="s7d">Aileyle sınır koyma, uzaktaki aileye karşı suçluluk, ebeveynlik zorlukları, kuşaklar arası çatışmalar.</p></article>
-      <article><h3 data-i18n="s8t">Yas ve kayıp</h3><p data-i18n="s8d">Bir yakını kaybetmek, uzaktayken vedalaşamamak, yasın tek başına taşınması, ilişki ya da iş kayıpları.</p></article>
-      <article><h3 data-i18n="s9t">Stres ve tükenmişlik</h3><p data-i18n="s9d">İş ve okul baskısı, kariyer değişiklikleri, mükemmeliyetçilik, iş ile özel hayat arasındaki dengenin kaybolması.</p></article>
-      <article><h3 data-i18n="s10t">Özgüven ve kendini tanıma</h3><p data-i18n="s10d">Kendine yönelik eleştirel ses, karar verememe, tekrar eden örüntüleri fark etme, sınır koyamama.</p></article>
-      <article><h3 data-i18n="s16t">Ergenlik dönemi</h3><p data-i18n="s16d">Okul ve sınav stresi, arkadaş ilişkileri, kimlik arayışı, aileyle iletişim ve gelecek kaygısı.</p></article>
-      <article><h3 data-i18n="s13t">Kronik ağrı ve migren</h3><p data-i18n="s13d">Uzun süren ağrılar, migren ve gerilim tipi baş ağrılarıyla yaşamayı kolaylaştırmak, ağrının duygu durumu ve günlük hayat üzerindeki etkisini azaltmak. Tıbbi tedavinin yerine değil, yanında.</p></article>
-      <article><h3 data-i18n="s20t">Kronik hastalıkla yaşam</h3><p data-i18n="s20d">Kanser, otoimmün hastalıklar ya da diyabet gibi tanılarla gelen kaygı, yas ve uyum süreci; tedavi döneminde duygusal destek.</p></article>
-      <article><h3 data-i18n="s14t">Bağımlılık</h3><p data-i18n="s14d">Alkol ve madde kullanımı, sigara, kumar, internet ve ekran bağımlılığı; bırakma sürecinde ve nüksleri önlemede destek.</p></article>
-      <article><h3 data-i18n="s15t">Hayat geçişleri</h3><p data-i18n="s15d">Evlilik, ebeveyn olmak, doğum sonrası dönem, iş değişikliği, taşınma ya da emeklilik gibi hayatın yeniden düzenlendiği dönemler.</p></article>
-      <article><h3 data-i18n="s21t">Kısırlık, tüp bebek ve gebelik kaybı</h3><p data-i18n="s21d">Tedavi sürecindeki umut ve hayal kırıklığı döngüsü, gebelik kaybının yası ve bu sürecin çift ilişkisine etkileri.</p></article>
-      <article><h3 data-i18n="s22t">LGBTİ+ bireyler</h3><p data-i18n="s22d">Cinsel yönelim ve kimlik sorularında, açılma sürecinde ve ayrımcılığın etkileriyle baş etmede olumlayıcı, yargısız destek.</p></article>
-      <article><h3 data-i18n="s1t">Taşınma ve uyum</h3><p data-i18n="s1d">Yeni bir şehre ya da ülkeye taşınmanın getirdiği yalnızlık, uyum güçlüğü, aidiyet ve kimlik soruları, geride bırakılanlara duyulan özlem.</p></article>
-      <article><h3 data-i18n="s11t">Öfke ve duygu düzenleme</h3><p data-i18n="s11d">Öfke patlamaları, duyguları tanıyamama ya da bastırma, yoğun duygularla baş etme.</p></article>
-      <article><h3 data-i18n="s12t">Uyku ve beden</h3><p data-i18n="s12d">Uyku sorunları, stresin bedende yarattığı belirtiler ve psikosomatik şikayetler.</p></article>
-      <article><h3 data-i18n="s23t">Yeme sorunları</h3><p data-i18n="s23d">Duygusal yeme, tıkınırcasına yeme, bitmeyen diyet döngüsü, beden algısı ve yemekle ilişkiyi yeniden kurma.</p></article>
+      <article><h3 data-i18n="s2t">Kaygı ve panik</h3><p data-i18n="s2d">Yaygın kaygı, panik atak, sağlık kaygısı, sosyal kaygı, belirli korkular (fobiler) ve sürekli bir şey olacakmış gibi hissetmek.</p><a class="more" href="/yazilar/kaygi-bozukluklari/" data-i18n="svcMore">Devamını okuyun</a></article>
+      <article><h3 data-i18n="s3t">Depresyon ve duygudurum</h3><p data-i18n="s3d">İsteksizlik, umutsuzluk, enerji ve keyif kaybı, değersizlik duygusu, duygu dalgalanmaları.</p><a class="more" href="/yazilar/depresyon/" data-i18n="svcMore">Devamını okuyun</a></article>
+      <article><h3 data-i18n="s4t">Travma ve zor yaşantılar</h3><p data-i18n="s4d">Kaza, kayıp, şiddet ya da çocukluktan gelen zor deneyimlerin bugüne etkisi, travma sonrası stres.</p><a class="more" href="/yazilar/travma-ve-tssb/" data-i18n="svcMore">Devamını okuyun</a></article>
+      <article><h3 data-i18n="s5t">Obsesif kompulsif belirtiler</h3><p data-i18n="s5d">Akıldan çıkmayan düşünceler, kontrol etme, temizlik ya da tekrar etme ihtiyacı.</p><a class="more" href="/yazilar/obsesif-kompulsif-bozukluk/" data-i18n="svcMore">Devamını okuyun</a></article>
+      <article><h3 data-i18n="s17t">Dikkat eksikliği (DEHB)</h3><p data-i18n="s17d">Ergen ve yetişkinlerde odaklanma güçlüğü, erteleme, dağınıklık ve dürtüsellikle baş etme; günlük hayatı düzenleme becerileri. Gerektiğinde psikiyatri ile iş birliği.</p><a class="more" href="/yazilar/dehb/" data-i18n="svcMore">Devamını okuyun</a></article>
+      <article><h3 data-i18n="s6t">İlişki sorunları</h3><p data-i18n="s6d">Partner ilişkileri, uzak mesafe ilişkileri, ayrılık ve boşanma süreci, bağlanma ve güven sorunları.</p><a class="more" href="/yazilar/iliski-sorunlari/" data-i18n="svcMore">Devamını okuyun</a></article>
+      <article><h3 data-i18n="s18t">Çift terapisi</h3><p data-i18n="s18d">Çiftlerle birlikte yapılan görüşmelerde iletişim sorunları, tekrar eden çatışmalar, güven kırılmaları ve ilişkiyi yeniden yapılandırma.</p><a class="more" href="/yazilar/cift-terapisi-ne-zaman/" data-i18n="svcMore">Devamını okuyun</a></article>
+      <article><h3 data-i18n="s19t">Cinsel sorunlar</h3><p data-i18n="s19d">Cinsel isteksizlik, performans kaygısı, vajinismus, cinsellikle ilgili utanç ve kaygılar.</p><a class="more" href="/yazilar/cinsel-sorunlar/" data-i18n="svcMore">Devamını okuyun</a></article>
+      <article><h3 data-i18n="s7t">Aile ilişkileri</h3><p data-i18n="s7d">Aileyle sınır koyma, uzaktaki aileye karşı suçluluk, ebeveynlik zorlukları, kuşaklar arası çatışmalar.</p><a class="more" href="/yazilar/aile-iliskileri/" data-i18n="svcMore">Devamını okuyun</a></article>
+      <article><h3 data-i18n="s8t">Yas ve kayıp</h3><p data-i18n="s8d">Bir yakını kaybetmek, uzaktayken vedalaşamamak, yasın tek başına taşınması, ilişki ya da iş kayıpları.</p><a class="more" href="/yazilar/yas-ve-kayip/" data-i18n="svcMore">Devamını okuyun</a></article>
+      <article><h3 data-i18n="s9t">Stres ve tükenmişlik</h3><p data-i18n="s9d">İş ve okul baskısı, kariyer değişiklikleri, mükemmeliyetçilik, iş ile özel hayat arasındaki dengenin kaybolması.</p><a class="more" href="/yazilar/stres-ve-tukenmislik/" data-i18n="svcMore">Devamını okuyun</a></article>
+      <article><h3 data-i18n="s10t">Özgüven ve kendini tanıma</h3><p data-i18n="s10d">Kendine yönelik eleştirel ses, karar verememe, tekrar eden örüntüleri fark etme, sınır koyamama.</p><a class="more" href="/yazilar/ozguven/" data-i18n="svcMore">Devamını okuyun</a></article>
+      <article><h3 data-i18n="s16t">Ergenlik dönemi</h3><p data-i18n="s16d">Okul ve sınav stresi, arkadaş ilişkileri, kimlik arayışı, aileyle iletişim ve gelecek kaygısı.</p><a class="more" href="/yazilar/ergenlik-donemi/" data-i18n="svcMore">Devamını okuyun</a></article>
+      <article><h3 data-i18n="s13t">Kronik ağrı ve migren</h3><p data-i18n="s13d">Uzun süren ağrılar, migren ve gerilim tipi baş ağrılarıyla yaşamayı kolaylaştırmak, ağrının duygu durumu ve günlük hayat üzerindeki etkisini azaltmak. Tıbbi tedavinin yerine değil, yanında.</p><a class="more" href="/yazilar/kronik-agri-ve-migren/" data-i18n="svcMore">Devamını okuyun</a></article>
+      <article><h3 data-i18n="s20t">Kronik hastalıkla yaşam</h3><p data-i18n="s20d">Kanser, otoimmün hastalıklar ya da diyabet gibi tanılarla gelen kaygı, yas ve uyum süreci; tedavi döneminde duygusal destek.</p><a class="more" href="/yazilar/kronik-hastalikla-yasam/" data-i18n="svcMore">Devamını okuyun</a></article>
+      <article><h3 data-i18n="s14t">Bağımlılık</h3><p data-i18n="s14d">Alkol ve madde kullanımı, sigara, kumar, internet ve ekran bağımlılığı; bırakma sürecinde ve nüksleri önlemede destek.</p><a class="more" href="/yazilar/bagimlilik/" data-i18n="svcMore">Devamını okuyun</a></article>
+      <article><h3 data-i18n="s15t">Hayat geçişleri</h3><p data-i18n="s15d">Evlilik, ebeveyn olmak, doğum sonrası dönem, iş değişikliği, taşınma ya da emeklilik gibi hayatın yeniden düzenlendiği dönemler.</p><a class="more" href="/yazilar/hayat-gecisleri/" data-i18n="svcMore">Devamını okuyun</a></article>
+      <article><h3 data-i18n="s21t">Kısırlık, tüp bebek ve gebelik kaybı</h3><p data-i18n="s21d">Tedavi sürecindeki umut ve hayal kırıklığı döngüsü, gebelik kaybının yası ve bu sürecin çift ilişkisine etkileri.</p><a class="more" href="/yazilar/kisirlik-ve-gebelik-kaybi/" data-i18n="svcMore">Devamını okuyun</a></article>
+      <article><h3 data-i18n="s22t">LGBTİ+ bireyler</h3><p data-i18n="s22d">Cinsel yönelim ve kimlik sorularında, açılma sürecinde ve ayrımcılığın etkileriyle baş etmede olumlayıcı, yargısız destek.</p><a class="more" href="/yazilar/lgbti-olumlayici-terapi/" data-i18n="svcMore">Devamını okuyun</a></article>
+      <article><h3 data-i18n="s1t">Taşınma ve uyum</h3><p data-i18n="s1d">Yeni bir şehre ya da ülkeye taşınmanın getirdiği yalnızlık, uyum güçlüğü, aidiyet ve kimlik soruları, geride bırakılanlara duyulan özlem.</p><a class="more" href="/yazilar/tasinma-ve-uyum/" data-i18n="svcMore">Devamını okuyun</a></article>
+      <article><h3 data-i18n="s11t">Öfke ve duygu düzenleme</h3><p data-i18n="s11d">Öfke patlamaları, duyguları tanıyamama ya da bastırma, yoğun duygularla baş etme.</p><a class="more" href="/yazilar/ofke-ve-duygu-duzenleme/" data-i18n="svcMore">Devamını okuyun</a></article>
+      <article><h3 data-i18n="s12t">Uyku ve beden</h3><p data-i18n="s12d">Uyku sorunları, stresin bedende yarattığı belirtiler ve psikosomatik şikayetler.</p><a class="more" href="/yazilar/uyku-sorunlari/" data-i18n="svcMore">Devamını okuyun</a></article>
+      <article><h3 data-i18n="s23t">Yeme sorunları</h3><p data-i18n="s23d">Duygusal yeme, tıkınırcasına yeme, bitmeyen diyet döngüsü, beden algısı ve yemekle ilişkiyi yeniden kurma.</p><a class="more" href="/yazilar/yeme-sorunlari/" data-i18n="svcMore">Devamını okuyun</a></article>
     </div>
     <p class="tz-note" data-i18n="svcNote">Burada adı geçmeyen bir konu için de yazabilirsiniz. Ön görüşmede birlikte çalışmanın size uygun olup olmadığını konuşuruz.</p>
   </div></section>
@@ -411,7 +416,7 @@ footer .wrap { padding-block: 28px; display: flex; justify-content: space-betwee
     draft: "Draft preview. Yellow highlights will be filled in with your details.",
     role: "Clinical Psychologist · Online Therapy",
     nav1: "About", nav2: "Services", nav3: "Online sessions", nav4: "Contact",
-    navHyp: "Hypnotherapy", navBlog: "Articles",
+    navHyp: "Hypnotherapy", navBlog: "Articles", svcMore: "Read more (in Turkish)",
     blogEyebrow: "Articles", blogTitle: "Further reading (in Turkish)", blogAll: "All articles",
     hypEyebrow: "Hypnotherapy", hypTitle: "What is hypnosis and how can it help?",
     hyp1: "Hypnosis is a natural state of focus in which attention turns inward, the body relaxes and the mind becomes more open to suggestion. Getting lost in a book or drifting off on a long drive are everyday experiences close to hypnosis.",
