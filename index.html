@@ -129,6 +129,11 @@ section + section { border-top: 1px solid var(--line) }
 .tz td.you { color: var(--accent); font-weight: 600 }
 .tz .day { font-size: .8rem; color: var(--muted); font-weight: 400 }
 
+.posts { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line) }
+.posts li { border-bottom: 1px solid var(--line); padding: 14px 16px 14px 0 }
+.posts a { font-family: var(--display); font-size: 1.2rem; text-decoration: none; color: var(--ink) }
+.posts a:hover { color: var(--accent) }
+@media (max-width: 640px) { .posts { grid-template-columns: 1fr } }
 .faq details { border-bottom: 1px solid var(--line); padding: 16px 0 }
 .faq summary { cursor: pointer; font-weight: 600; list-style-position: outside }
 .faq details p { margin-top: 10px; color: var(--muted) }
@@ -187,6 +192,7 @@ footer .wrap { padding-block: 28px; display: flex; justify-content: space-betwee
         <a href="#hizmetler" data-i18n="nav2">Hizmetler</a>
         <a href="#hipnoterapi" data-i18n="navHyp">Hipnoterapi</a>
         <a href="#nasil" data-i18n="nav3">Online seans</a>
+        <a href="/yazilar/" data-i18n="navBlog">Yazılar</a>
         <a href="#iletisim" data-i18n="nav4">İletişim</a>
       </span>
       <div class="lang" role="group" aria-label="Dil / Language">
@@ -321,6 +327,20 @@ footer .wrap { padding-block: 28px; display: flex; justify-content: space-betwee
     </div>
   </div></section>
 
+  <section id="yazilar"><div class="wrap">
+    <div class="sec-head"><p class="eyebrow" data-i18n="blogEyebrow">Yazılar</p><h2 data-i18n="blogTitle">Okumak isterseniz</h2></div>
+    <ul class="posts">
+      <li><a href="/yazilar/panik-atak-nasil-gecer/">Panik atak nedir, nasıl geçer?</a></li>
+      <li><a href="/yazilar/emdr-terapisi-nedir/">EMDR terapisi nedir? Online EMDR yapılabilir mi?</a></li>
+      <li><a href="/yazilar/hipnoterapi-nedir/">Hipnoterapi nedir, kimlere iyi gelir?</a></li>
+      <li><a href="/yazilar/vajinismus-tedavisi/">Vajinismus nedir, nasıl tedavi edilir?</a></li>
+      <li><a href="/yazilar/cift-terapisi-ne-zaman/">Çift terapisine ne zaman başvurmalı?</a></li>
+      <li><a href="/yazilar/ergenlerde-kaygi/">Ergenlerde kaygı: Ebeveynler için rehber</a></li>
+      <li><a href="/yazilar/fibromiyalji-ve-kronik-agri/">Fibromiyalji ve kronik ağrıda psikoterapi</a></li>
+    </ul>
+    <p style="margin-top:20px"><a href="/yazilar/" data-i18n="blogAll">Tüm yazılar</a></p>
+  </div></section>
+
   <section id="sss"><div class="wrap">
     <div class="sec-head"><p class="eyebrow" data-i18n="faqEyebrow">Sık sorulanlar</p><h2 data-i18n="faqTitle">Merak edilenler</h2></div>
     <div class="faq read">
@@ -391,7 +411,8 @@ footer .wrap { padding-block: 28px; display: flex; justify-content: space-betwee
     draft: "Draft preview. Yellow highlights will be filled in with your details.",
     role: "Clinical Psychologist · Online Therapy",
     nav1: "About", nav2: "Services", nav3: "Online sessions", nav4: "Contact",
-    navHyp: "Hypnotherapy",
+    navHyp: "Hypnotherapy", navBlog: "Articles",
+    blogEyebrow: "Articles", blogTitle: "Further reading (in Turkish)", blogAll: "All articles",
     hypEyebrow: "Hypnotherapy", hypTitle: "What is hypnosis and how can it help?",
     hyp1: "Hypnosis is a natural state of focus in which attention turns inward, the body relaxes and the mind becomes more open to suggestion. Getting lost in a book or drifting off on a long drive are everyday experiences close to hypnosis.",
     hyp2: "Hypnotherapy is the use of this state for therapeutic purposes, as part of a therapy plan. It is not a magic solution on its own; it is a tool I use alongside other methods when it is appropriate. I hold a hypnosis practice certificate approved by the Turkish Ministry of Health.",
