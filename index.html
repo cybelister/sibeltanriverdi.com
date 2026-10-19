@@ -527,7 +527,7 @@ footer .wrap { padding-block: 28px; display: flex; justify-content: space-betwee
       headers: { "Content-Type": "application/json", "Accept": "application/json" },
       body: JSON.stringify({ _subject: subject, _template: "table", _captcha: "false", ad: v("f-name"), email: v("f-mail"), sehir: v("f-country"), mesaj: v("f-msg"), kvkk_onayi: "evet" })
     }).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (d) {
-      if (d && String(d.success) === "false") throw 0;
+      if (d && String(d.success) === "false" && !/activat/i.test(d.message || "")) throw 0;
       document.getElementById("form").reset();
       document.getElementById("formsent").hidden = false;
       document.getElementById("formsent").scrollIntoView({ block: "center", behavior: "smooth" });
