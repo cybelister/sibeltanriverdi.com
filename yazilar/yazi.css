@@ -1,4 +1,4 @@
-:root { --bg: #f8f9f8; --surface: #fff; --ink: #23292a; --muted: #6b7372; --line: #dde3dd; --accent: #4f6b57; --accent-soft: #e8efe7;
+:root { --bg: #f8f9f8; --surface: #fff; --ink: #23292a; --muted: #5d6564; --line: #dde3dd; --accent: #4f6b57; --accent-soft: #e8efe7;
   --display: "Newsreader", Georgia, serif; --body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif }
 * { box-sizing: border-box }
 body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.7 }
