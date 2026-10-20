@@ -1,6 +1,5 @@
 :root { --bg: #f8f9f8; --surface: #fff; --ink: #23292a; --muted: #6b7372; --line: #dde3dd; --accent: #4f6b57; --accent-soft: #e8efe7;
   --display: "Newsreader", Georgia, serif; --body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif }
-@media (prefers-color-scheme: dark) { :root { --bg: #151a17; --surface: #1c231f; --ink: #e6ebe7; --muted: #a3ada6; --line: #2e3831; --accent: #a9c7ad; --accent-soft: #1f2d24; color-scheme: dark } }
 * { box-sizing: border-box }
 body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.7 }
 .wrap { max-width: 760px; margin: 0 auto; padding: 0 max(16px, env(safe-area-inset-left, 0px)) }
