@@ -18,6 +18,10 @@
     window.gtag = function () { dataLayer.push(arguments); };
     gtag("js", new Date());
     gtag("config", GA_ID);
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest && e.target.closest('a[href*="calendar.app.google"]');
+      if (a) gtag("event", "randevu_tiklama", { link_text: a.textContent.trim().slice(0, 60) });
+    });
     var s = document.createElement("script");
     s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
     document.head.appendChild(s);

@@ -697,6 +697,7 @@ footer .wrap { padding-block: 28px; display: flex; justify-content: space-betwee
     var form = this, data = { _subject: subject, _template: "table", _captcha: "false", ad: v("f-name"), email: v("f-mail"), sehir: v("f-country"), mesaj: v("f-msg"), kvkk_onayi: "evet" };
     var sent = document.getElementById("formsent"), box = document.getElementById("formmsg");
     form.reset(); box.hidden = true; sent.hidden = false;
+    if (window.gtag) gtag("event", "form_gonderildi");
     sent.scrollIntoView({ block: "center", behavior: "smooth" });
     fetch("https://formsubmit.co/ajax/c286218f23fd2e078a5fd45912381701", {
       method: "POST",
