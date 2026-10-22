@@ -11,7 +11,7 @@
 <meta property="og:description" content="Türkçe online terapi; nerede yaşarsanız yaşayın, evinizin rahatlığından.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="tr_TR">
-<meta property="og:image" content="https://sibeltanriverdi.com/sibel.jpg">
+<meta property="og:image" content="https://sibeltanriverdi.com/og.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -21,7 +21,7 @@
   "email": "sibeltanriverdi91@gmail.com",
   "sameAs": ["https://www.instagram.com/psikologsibeltanriverdi/"],
   "url": "https://sibeltanriverdi.com/",
-  "image": "https://sibeltanriverdi.com/sibel.jpg",
+  "image": "https://sibeltanriverdi.com/og.png",
   "availableLanguage": "Turkish",
   "knowsAbout": ["Kaygı ve panik atak", "Depresyon", "Yas ve kayıp", "Travma ve TSSB", "Obsesif kompulsif bozukluk", "DEHB", "İlişki ve aile sorunları", "Çift terapisi", "Cinsel sorunlar", "Stres ve tükenmişlik", "Özgüven", "Öfke ve duygu düzenleme", "Uyku sorunları", "Yeme sorunları", "Kronik ağrı ve migren", "Kronik hastalıkla yaşam", "Bağımlılık", "Kısırlık ve gebelik kaybı", "Ergenlik dönemi", "Hayat geçişleri", "Göç ve uyum", "LGBTİ+ olumlayıcı terapi", "Bilişsel Davranışçı Terapi", "EMDR", "Kabul ve Kararlılık Terapisi", "Hipnoterapi"],
   "areaServed": ["Turkey", "Germany", "Netherlands", "Belgium", "Austria", "Switzerland", "France", "United Kingdom", "Sweden", "United States", "Canada", "Australia"],
@@ -158,6 +158,14 @@ nav a:hover { color: var(--accent) }
 .btn { display: inline-block; font: inherit; font-weight: 600; padding: 12px 22px; border-radius: 8px; text-decoration: none; cursor: pointer; border: 1px solid var(--accent) }
 .btn.primary { background: var(--accent); color: var(--bg) }
 .btn.ghost { background: transparent; color: var(--accent) }
+.hcard { background: var(--accent-soft); border-radius: 160px 160px 16px 16px; padding: 52px 32px 32px; text-align: center }
+.hmark { width: 60px; height: 60px; border-radius: 50%; background: var(--accent); color: var(--bg); display: grid; place-items: center; font-family: var(--display); font-size: 1.9rem; margin: 0 auto 16px }
+.hname { font-family: var(--display); font-size: 1.6rem; margin: 0 }
+.hrole { color: var(--muted); font-size: .95rem; margin: 2px 0 22px }
+.htitle { font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin: 0 0 8px; padding-top: 20px; border-top: 1px solid rgba(79,107,87,.2) }
+.hcard ol { list-style: none; padding: 0; margin: 0; display: grid; gap: 0; text-align: left }
+.hcard li { display: flex; gap: 12px; align-items: flex-start; padding: 10px 0 }
+.hcard li b { flex: none; width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--accent); color: var(--accent); display: grid; place-items: center; font-size: .85rem; margin-top: 1px }
 .photo { display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 4/5; object-fit: cover; object-position: 50% 30%; border-radius: 180px 180px 12px 12px; background: var(--accent-soft) }
 
 section { padding-block: 64px }
@@ -238,6 +246,7 @@ footer .wrap { padding-block: 28px; display: flex; justify-content: space-betwee
 @media (max-width: 820px) {
   .hero .wrap, .about, .tz, .contact { grid-template-columns: 1fr }
   .photo { max-width: 280px; }
+  .hcard { max-width: 420px; border-radius: 120px 120px 16px 16px; padding-top: 44px }
   .services { grid-template-columns: 1fr 1fr }
   .steps { grid-template-columns: 1fr 1fr }
   nav .navlinks { display: none }
@@ -289,7 +298,17 @@ footer .wrap { padding-block: 28px; display: flex; justify-content: space-betwee
         <a class="btn ghost" href="#nasil" data-i18n="cta2">Online seans nasıl işler?</a>
       </div>
     </div>
-    <img class="photo" src="sibel.webp" fetchpriority="high" width="600" height="600" alt="Uzman Klinik Psikolog Sibel Tanrıverdi">
+    <aside class="hcard">
+      <div class="hmark" aria-hidden="true">Ψ</div>
+      <p class="hname">Sibel Tanrıverdi</p>
+      <p class="hrole" data-i18n="hcRole">Uzman Klinik Psikolog</p>
+      <p class="htitle" data-i18n="hc0">Üç adımda başlayın</p>
+      <ol>
+        <li><b>1</b><span data-i18n="hc1">Takvimden size uygun bir saat seçin.</span></li>
+        <li><b>2</b><span data-i18n="hc2">10 dakikalık ücretsiz ön görüşmede ihtiyacınızı konuşalım.</span></li>
+        <li><b>3</b><span data-i18n="hc3">Uygun görürseniz haftalık 45 dakikalık online seanslara başlayalım.</span></li>
+      </ol>
+    </aside>
   </div></div>
 
   <section id="hakkimda"><div class="wrap">
@@ -509,6 +528,7 @@ footer .wrap { padding-block: 28px; display: flex; justify-content: space-betwee
     heroEyebrow: "Online therapy",
     heroTitle: "A safe space in your own language, on the other side of the screen.",
     heroLead: "Online video therapy for adolescents and adults. No commute, no traffic, from the comfort of your home wherever you are.",
+    hcRole: "Clinical Psychologist", hc0: "Start in three steps", hc1: "Pick a time that suits you from the calendar.", hc2: "Let's talk about what you need in a free 10-minute first call.", hc3: "If it feels right, we begin weekly 45-minute online sessions.",
     cta1: "Book a free first call", cta2: "How do online sessions work?",
     photo: "Your photo goes here<br>(a portrait in natural light works well)",
     aboutEyebrow: "About", aboutTitle: "Hello, I'm Sibel.",
