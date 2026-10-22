@@ -4,8 +4,8 @@
   if (!GA_ID) return;
   var KEY = "ga-consent";
   var T = {
-    tr: { text: "Sitenin nasıl kullanıldığını anlamak için Google Analytics çerezlerini kullanmak istiyoruz. Kabul etmezseniz bu çerezler yüklenmez.", more: "Ayrıntılar", yes: "Kabul et", no: "Reddet", prefs: "Çerez tercihleri" },
-    en: { text: "We would like to use Google Analytics cookies to understand how the site is used. If you decline, they are not loaded.", more: "Details", yes: "Accept", no: "Decline", prefs: "Cookie preferences" }
+    tr: { text: "Siteyi daha iyi hâle getirebilmek için çerez kullanıyorum.", more: "Ayrıntılar", yes: "Tamam", no: "İstemiyorum", prefs: "Çerez tercihleri" },
+    en: { text: "I use cookies to help improve this site.", more: "Details", yes: "OK", no: "No thanks", prefs: "Cookie preferences" }
   };
   function lang() { return (document.documentElement.lang || "tr").slice(0, 2) === "en" ? "en" : "tr"; }
   function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
