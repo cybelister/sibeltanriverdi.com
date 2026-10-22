@@ -1,6 +1,6 @@
 /* Google Analytics, loaded only after the visitor accepts cookies. GoatCounter (cookie-free) runs separately. */
 (function () {
-  var GA_ID = "";
+  var GA_ID = "G-0XKNVCNQVG";
   if (!GA_ID) return;
   var KEY = "ga-consent";
   var T = {
