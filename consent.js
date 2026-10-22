@@ -4,8 +4,8 @@
   if (!GA_ID) return;
   var KEY = "ga-consent";
   var T = {
-    tr: { text: "Siteyi daha iyi hâle getirebilmek için çerez kullanıyorum.", more: "Ayrıntılar", yes: "Tamam", no: "İstemiyorum", prefs: "Çerez tercihleri" },
-    en: { text: "I use cookies to help improve this site.", more: "Details", yes: "OK", no: "No thanks", prefs: "Cookie preferences" }
+    tr: { text: "Size daha iyi bir deneyim sunabilmek için çerezler kullanılmaktadır. Ayrıntılı bilgi için", more: "Çerez Politikası", after: "'nı inceleyebilirsiniz.", yes: "Kabul Et", no: "Reddet", prefs: "Çerez tercihleri" },
+    en: { text: "This website uses cookies to give you a better experience. For details, see the", more: "Cookie Policy", after: ".", yes: "Accept", no: "Decline", prefs: "Cookie preferences" }
   };
   function lang() { return (document.documentElement.lang || "tr").slice(0, 2) === "en" ? "en" : "tr"; }
   function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
@@ -45,7 +45,7 @@
     if (!st) { st = document.createElement("style"); st.id = "ck-css"; st.textContent = css; document.head.appendChild(st); }
     var d = document.createElement("div");
     d.className = "ck"; d.setAttribute("role", "dialog"); d.setAttribute("aria-label", t.prefs);
-    d.innerHTML = '<p>' + t.text + ' <a href="/#gizlilik">' + t.more + '</a></p><div class="b"><button class="y" type="button">' + t.yes + '</button><button class="n" type="button">' + t.no + '</button></div>';
+    d.innerHTML = '<p>' + t.text + ' <a href="/#gizlilik">' + t.more + '</a>' + t.after + '</p><div class="b"><button class="y" type="button">' + t.yes + '</button><button class="n" type="button">' + t.no + '</button></div>';
     d.querySelector(".y").onclick = function () { set("yes"); d.remove(); load(); };
     d.querySelector(".n").onclick = function () { set("no"); window["ga-disable-" + GA_ID] = true; d.remove(); clearCookies(); };
     document.body.appendChild(d);
