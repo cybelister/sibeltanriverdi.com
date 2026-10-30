@@ -27,6 +27,7 @@
 .qz-btn { font: inherit; font-weight: 600; border: 0; border-radius: 8px; padding: 12px 22px; cursor: pointer; background: var(--accent); color: var(--bg); min-height: 46px }
 .qz-btn.ghost { background: transparent; color: var(--accent); border: 1px solid var(--line) }
 .qz-btn:disabled { opacity: .4; cursor: default }
+a.qz-btn { display: inline-flex; align-items: center; text-decoration: none }
 .qz-btn:focus-visible, .qz-opt:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px }
 .qz-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center }
 .qz-meta { display: flex; justify-content: space-between; font-size: .85rem; color: var(--muted); font-variant-numeric: tabular-nums }
@@ -104,10 +105,11 @@
   </div>
   <div class="qz-block">
     <h3>Sonucunuzu paylaşın</h3>
+    <p class="qz-small">Aşağıdaki düğme sonucunuzu kopyalar ve videoyu açar. Videonun altındaki yorum alanına yapıştırmanız yeterli.</p>
     <p class="qz-share" id="sharetext"></p>
     <div class="qz-row">
-      <button class="qz-btn" id="copy">Metni kopyala</button>
-      <a href="https://www.youtube.com/@psikologsibeltanriverdi" target="_blank" rel="noopener">YouTube kanalına git</a>
+      <a class="qz-btn" id="tovideo" href="https://www.youtube.com/watch?v=-nULdXgbkXI" target="_blank" rel="noopener">Kopyala ve videoya yorum yaz</a>
+      <button class="qz-btn ghost" id="copy">Sadece kopyala</button>
     </div>
     <span class="qz-small" id="copied" aria-live="polite"></span>
   </div>
@@ -233,6 +235,9 @@ $("copy").onclick=()=>{
   const ok=()=>$("copied").textContent="Kopyalandı. İstediğiniz yere yapıştırabilirsiniz.";
   const fallback=()=>{const r=document.createRange();r.selectNodeContents($("sharetext"));const s=getSelection();s.removeAllRanges();s.addRange(r);$("copied").textContent="Metin seçildi, kopyalayabilirsiniz.";};
   try{navigator.clipboard.writeText(t).then(ok,fallback);}catch(e){fallback();}
+};
+$("tovideo").onclick=()=>{
+  try{navigator.clipboard.writeText($("sharetext").textContent).then(()=>{$("copied").textContent="Kopyalandı. Videonun altındaki yoruma yapıştırabilirsiniz.";},()=>{});}catch(e){}
 };
 document.addEventListener("keydown",e=>{
   if($("quiz").hidden) return;
