@@ -471,12 +471,15 @@ footer .wrap { padding-block: 28px; display: flex; justify-content: space-betwee
           <label for="f-name"><span data-i18n="fName">Adınız</span><input id="f-name" required></label>
           <label for="f-mail"><span data-i18n="fMail">E-posta</span><input id="f-mail" type="email" required></label>
         </div>
-        <label for="f-country"><span data-i18n="fCountry">Yaşadığınız şehir</span><input id="f-country" placeholder="İstanbul"></label>
+        <div class="row2">
+          <label for="f-phone"><span data-i18n="fPhone">Telefon numaranız</span><input id="f-phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+90 5xx xxx xx xx" required></label>
+          <label for="f-country"><span data-i18n="fCountry">Yaşadığınız şehir</span><input id="f-country" placeholder="İstanbul"></label>
+        </div>
         <label for="f-msg"><span data-i18n="fMsg">Kısaca neden destek almak istediğinizi yazabilirsiniz (isteğe bağlı)</span><textarea id="f-msg" rows="4"></textarea></label>
         <label for="f-consent" class="consent"><input id="f-consent" type="checkbox" required><span data-i18n="fConsent"><a href="#gizlilik">Aydınlatma metnini</a> okudum; mesajımda paylaştığım bilgilerin randevu talebime dönüş yapılması amacıyla işlenmesine ve bu amaçla yurt dışındaki sunuculara aktarılmasına açık rıza veriyorum.</span></label>
         <button class="btn primary" type="submit" data-i18n="fSend">Gönder</button>
-        <p class="formmsg" id="formsent" hidden data-i18n="fSent">Teşekkürler, mesajınız iletildi. En kısa sürede size dönüş yapacağım.</p>
-        <p class="formmsg" id="formerr" hidden data-i18n="fErr">Göndermek için adınızı, e-postanızı yazıp onay kutusunu işaretleyin.</p>
+        <p class="formmsg" id="formsent" hidden data-i18n="fSent">Teşekkürler, mesajınız iletildi. Sizlere en yakın sürede geri dönülecektir.</p>
+        <p class="formmsg" id="formerr" hidden data-i18n="fErr">Göndermek için adınızı, e-postanızı ve telefon numaranızı yazıp onay kutusunu işaretleyin.</p>
         <div class="formmsg mailbox" id="formmsg" hidden>
           <p data-i18n="fFail">Mesajınız şu anda iletilemedi. Lütfen bana doğrudan bu adresten yazın:</p>
           <p><b id="mailaddr">sibeltanriverdi91@gmail.com</b> <button type="button" class="copy" id="copymail" data-i18n="fCopy">Kopyala</button></p>
@@ -490,7 +493,7 @@ footer .wrap { padding-block: 28px; display: flex; justify-content: space-betwee
       <summary><span class="eyebrow" data-i18n="kvkkEyebrow">Gizlilik</span><h3 data-i18n="kvkkTitle">Kişisel Verilerin Korunması Aydınlatma Metni</h3></summary>
       <div data-i18n="kvkkBody">
         <p>Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında, veri sorumlusu sıfatıyla Uzman Klinik Psikolog Sibel Tanrıverdi tarafından hazırlanmıştır.</p>
-        <p><b>İşlenen veriler.</b> İletişim formu ya da e-posta yoluyla paylaştığınız ad, e-posta adresi, yaşadığınız ülke/şehir ve mesajınızın içeriği. Mesajınızda paylaşmayı seçtiğiniz sağlık bilgileri KVKK'da özel nitelikli kişisel veri sayılır.</p>
+        <p><b>İşlenen veriler.</b> İletişim formu ya da e-posta yoluyla paylaştığınız ad, e-posta adresi, telefon numarası, yaşadığınız ülke/şehir ve mesajınızın içeriği. Mesajınızda paylaşmayı seçtiğiniz sağlık bilgileri KVKK'da özel nitelikli kişisel veri sayılır.</p>
         <p><b>Amaç.</b> Randevu ve ön görüşme talebinize dönüş yapmak, seans planlamak ve sizinle iletişim kurmak.</p>
         <p><b>Hukuki sebep.</b> Bir sözleşmenin kurulmasıyla doğrudan ilgili olması (KVKK m. 5/2-c) ve özel nitelikli veriler ile yurt dışına aktarım için açık rızanız (KVKK m. 6 ve m. 9).</p>
         <p><b>Aktarım.</b> Verileriniz üçüncü kişilerle paylaşılmaz. Form ve e-posta hizmetleri (Google ve FormSubmit) sunucuları yurt dışında bulunduğundan veriler bu hizmetler aracılığıyla yurt dışına aktarılır. Seans içerikleri kaydedilmez.</p>
@@ -599,18 +602,18 @@ footer .wrap { padding-block: 28px; display: flex; justify-content: space-betwee
     ctEyebrow: "Contact", ctTitle: "A short message is all it takes to start.",
     ctLead: "Messages are usually answered within one working day.",
     chMail: "Email",
-    fName: "Your name", fMail: "Email", fCountry: "City you live in",
+    fName: "Your name", fMail: "Email", fPhone: "Phone number", fCountry: "City you live in",
     fMsg: "Briefly, why you would like support (optional)", fSend: "Send",
     fDraft: "Your message is ready. Use the button below to open it in your email app. If the app does not open, write directly to this address:",
-    fSent: "Thank you, your message has been sent. I will get back to you soon.",
+    fSent: "Thank you, your message has been sent. You will hear back as soon as possible.",
     fFail: "Your message could not be delivered right now. Please write to me directly at this address:",
-    fErr: "To send, enter your name and email and tick the consent box.",
+    fErr: "To send, enter your name, email and phone number and tick the consent box.",
     fCopy: "Copy", fOpen: "Open in email app",
     foot: "Information on this site does not replace diagnosis or treatment.",
     footKvkk: "Privacy notice",
     fConsent: 'I have read the <a href="#gizlilik">privacy notice</a> and give my explicit consent to the information in my message being processed to answer my appointment request, and transferred to servers abroad for this purpose.',
     kvkkEyebrow: "Privacy", kvkkTitle: "Privacy Notice (KVKK)",
-    kvkkBody: "<p>This notice is provided under Turkish Personal Data Protection Law No. 6698 (KVKK) by the data controller, Clinical Psychologist Sibel Tanrıverdi.</p><p><b>Data processed.</b> Your name, email address, country/city and message, shared via the contact form or email. Any health information you choose to share counts as special category data.</p><p><b>Purpose.</b> To answer your appointment or first-call request, schedule sessions and contact you.</p><p><b>Legal basis.</b> Necessity for entering into a contract (KVKK Art. 5/2-c) and your explicit consent for special category data and transfer abroad (KVKK Art. 6 and 9).</p><p><b>Transfer.</b> Your data is not shared with third parties. Email and form services (Google and the form provider) run on servers abroad, so data is transferred abroad through these services. Sessions are not recorded.</p><p><b>Retention.</b> If therapy does not begin, contact records are deleted within 1 year at the latest. If it does, records are kept securely for the legally required period.</p><p><b>Your rights.</b> Under KVKK Art. 11 you may ask whether your data is processed, request correction or deletion, and withdraw your consent. Send requests to sibeltanriverdi91@gmail.com.</p>"
+    kvkkBody: "<p>This notice is provided under Turkish Personal Data Protection Law No. 6698 (KVKK) by the data controller, Clinical Psychologist Sibel Tanrıverdi.</p><p><b>Data processed.</b> Your name, email address, phone number, country/city and message, shared via the contact form or email. Any health information you choose to share counts as special category data.</p><p><b>Purpose.</b> To answer your appointment or first-call request, schedule sessions and contact you.</p><p><b>Legal basis.</b> Necessity for entering into a contract (KVKK Art. 5/2-c) and your explicit consent for special category data and transfer abroad (KVKK Art. 6 and 9).</p><p><b>Transfer.</b> Your data is not shared with third parties. Email and form services (Google and the form provider) run on servers abroad, so data is transferred abroad through these services. Sessions are not recorded.</p><p><b>Retention.</b> If therapy does not begin, contact records are deleted within 1 year at the latest. If it does, records are kept securely for the legally required period.</p><p><b>Your rights.</b> Under KVKK Art. 11 you may ask whether your data is processed, request correction or deletion, and withdraw your consent. Send requests to sibeltanriverdi91@gmail.com.</p>"
   };
   var TR = {};
   var nodes = document.querySelectorAll("[data-i18n]");
@@ -691,12 +694,12 @@ footer .wrap { padding-block: 28px; display: flex; justify-content: space-betwee
   document.getElementById("form").addEventListener("submit", function (e) {
     e.preventDefault();
     var v = function (id) { return document.getElementById(id).value.trim(); };
-    var ok = v("f-name") && v("f-mail") && document.getElementById("f-consent").checked;
+    var ok = v("f-name") && v("f-mail") && v("f-phone").replace(/\D/g, "").length >= 7 && document.getElementById("f-consent").checked;
     document.getElementById("formerr").hidden = !!ok;
     if (!ok) return;
     var subject = (lang === "tr" ? "Ön görüşme talebi - " : "First call request - ") + v("f-name");
-    var body = (lang === "tr" ? "Ad: " : "Name: ") + v("f-name") + "\n" + (lang === "tr" ? "E-posta: " : "Email: ") + v("f-mail") + "\n" + (lang === "tr" ? "Şehir: " : "City: ") + v("f-country") + "\n\n" + v("f-msg");
-    var form = this, data = { _subject: subject, _template: "table", _captcha: "false", ad: v("f-name"), email: v("f-mail"), sehir: v("f-country"), mesaj: v("f-msg"), kvkk_onayi: "evet" };
+    var body = (lang === "tr" ? "Ad: " : "Name: ") + v("f-name") + "\n" + (lang === "tr" ? "E-posta: " : "Email: ") + v("f-mail") + "\n" + (lang === "tr" ? "Telefon: " : "Phone: ") + v("f-phone") + "\n" + (lang === "tr" ? "Şehir: " : "City: ") + v("f-country") + "\n\n" + v("f-msg");
+    var form = this, data = { _subject: subject, _template: "table", _captcha: "false", ad: v("f-name"), email: v("f-mail"), telefon: v("f-phone"), sehir: v("f-country"), mesaj: v("f-msg"), kvkk_onayi: "evet" };
     var sent = document.getElementById("formsent"), box = document.getElementById("formmsg");
     form.reset(); box.hidden = true; sent.hidden = false;
     if (window.gtag) gtag("event", "form_gonderildi");
