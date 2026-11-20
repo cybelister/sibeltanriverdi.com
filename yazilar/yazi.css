@@ -37,3 +37,4 @@ ul { padding-left: 1.2em; margin: 0 0 14px; display: grid; gap: 6px }
 .note { font-size: .85rem; color: var(--muted); margin-top: 32px }
 footer { border-top: 1px solid var(--line); font-size: .85rem; color: var(--muted) }
 footer .wrap { padding-block: 24px }
+.nextstep { margin-top: 32px; padding: 16px 20px; border-left: 3px solid var(--accent); background: var(--surface); border-radius: 0 8px 8px 0 }
