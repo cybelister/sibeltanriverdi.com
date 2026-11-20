@@ -19,7 +19,7 @@
     gtag("js", new Date());
     gtag("config", GA_ID);
     document.addEventListener("click", function (e) {
-      var a = e.target.closest && e.target.closest('a[href*="calendar.app.google"]');
+      var a = e.target.closest && e.target.closest('a[href*="calendar.app.google"], a[href^="/on-gorusme"]');
       if (a) gtag("event", "randevu_tiklama", { link_text: a.textContent.trim().slice(0, 60) });
     });
     var s = document.createElement("script");
