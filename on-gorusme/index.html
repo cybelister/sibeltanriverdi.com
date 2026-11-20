@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="only light">
+<title>Ücretsiz ön görüşme | Psikolog Sibel Tanrıverdi</title>
+<meta name="description" content="Ücretsiz 10 dakikalık ön görüşme için kısa formu doldurun, ardından takvimden size uygun saati seçin.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://sibeltanriverdi.com/on-gorusme/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/yazilar/yazi.css">
+<style>
+[hidden] { display: none !important }
+.steps { display: flex; gap: 10px; flex-wrap: wrap; margin: 0 0 28px; padding: 0; list-style: none; font-size: .92rem; color: var(--muted) }
+.steps li { background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 4px 14px }
+.steps li.on { background: var(--accent); border-color: var(--accent); color: var(--bg) }
+form { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 24px; display: grid; gap: 18px }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px }
+@media (max-width: 600px) { .row2 { grid-template-columns: 1fr } form { padding: 18px } }
+label, fieldset { display: grid; gap: 6px; font-size: .95rem; font-weight: 600; margin: 0 }
+fieldset { border: 0; padding: 0 }
+legend { padding: 0; margin-bottom: 6px; font-weight: 600 }
+.opt { font-weight: 400; color: var(--muted) }
+input[type=text], input[type=email], input[type=tel], select { font: inherit; font-weight: 400; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--ink); width: 100% }
+input:focus, select:focus { outline: 2px solid var(--accent); outline-offset: 1px }
+.choices { display: flex; flex-wrap: wrap; gap: 8px }
+.choices label { display: inline-flex; align-items: center; gap: 8px; font-weight: 400; border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; cursor: pointer; background: var(--bg) }
+.choices label:has(input:checked) { border-color: var(--accent); background: var(--accent-soft) }
+.choices input { accent-color: var(--accent); margin: 0 }
+.hint { font-weight: 400; font-size: .88rem; color: var(--muted); margin: 0 }
+.consent { display: flex; gap: 10px; align-items: flex-start; font-weight: 400; font-size: .9rem; line-height: 1.5 }
+.consent input { margin-top: 4px; accent-color: var(--accent); flex: none; width: 18px; height: 18px }
+button.btn { border: 0; font: inherit; font-weight: 600; cursor: pointer; justify-self: start }
+.err { color: #9a3b2e; font-size: .92rem; margin: 0 }
+.done { background: var(--accent-soft); border-radius: 12px; padding: 28px }
+.done h2 { margin-top: 0 }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="brand" href="/">Sibel Tanrıverdi<small>Uzman Klinik Psikolog · Online Terapi</small></a>
+  <nav><a href="/yazilar/">Yazılar</a><a href="/testler/">Testler</a><a href="/#iletisim">İletişim</a></nav>
+</div></header>
+<main><div class="wrap">
+<p class="crumb"><a href="/">Ana sayfa</a> / Ön görüşme</p>
+<h1>Ücretsiz ön görüşme</h1>
+<p class="lead">10 dakikalık ön görüşmeye daha iyi hazırlanabilmem için birkaç kısa soru. Formu gönderdikten sonra takvimden size uygun saati seçeceksiniz.</p>
+<ol class="steps" id="steps"><li class="on">1. Kısa form</li><li>2. Saat seçimi</li></ol>
+
+<form id="pre" novalidate>
+  <div class="row2">
+    <label for="p-name">Ad soyad<input id="p-name" type="text" autocomplete="name" required></label>
+    <label for="p-phone">Telefon numarası<input id="p-phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+90 5xx xxx xx xx" required></label>
+  </div>
+  <div class="row2">
+    <label for="p-mail">E-posta<input id="p-mail" type="email" autocomplete="email" required></label>
+    <label for="p-country">Yaşadığınız ülke <span class="opt">(isteğe bağlı)</span><input id="p-country" type="text" autocomplete="country-name" placeholder="Türkiye"></label>
+  </div>
+  <fieldset>
+    <legend>Görüşme kimin için?</legend>
+    <div class="choices">
+      <label><input type="radio" name="yas" value="18 yaş ve üzeri"> 18 yaş ve üzeri</label>
+      <label><input type="radio" name="yas" value="18 yaş altı (ebeveyn)"> 18 yaş altı bir gencim / çocuğum için</label>
+    </div>
+    <p class="hint" id="minor" hidden>18 yaş altı için ön görüşme ebeveyn ya da yasal vasiyle yapılır. Lütfen formdaki bilgileri ebeveyn olarak doldurun.</p>
+  </fieldset>
+  <fieldset>
+    <legend>Hangi konuda destek almak istiyorsunuz? <span class="opt">(birden fazla seçebilirsiniz)</span></legend>
+    <div class="choices" id="topics">
+      <label><input type="checkbox" value="Kaygı / panik"> Kaygı / panik</label>
+      <label><input type="checkbox" value="Depresyon / isteksizlik"> Depresyon / isteksizlik</label>
+      <label><input type="checkbox" value="İlişki / çift"> İlişki / çift</label>
+      <label><input type="checkbox" value="Aile"> Aile</label>
+      <label><input type="checkbox" value="Stres / tükenmişlik"> Stres / tükenmişlik</label>
+      <label><input type="checkbox" value="Travma / zor yaşantılar"> Travma / zor yaşantılar</label>
+      <label><input type="checkbox" value="Özgüven"> Özgüven</label>
+      <label><input type="checkbox" value="Diğer" id="p-other-box"> Diğer</label>
+    </div>
+    <input id="p-other" type="text" placeholder="Birkaç kelimeyle yazabilirsiniz" maxlength="120" hidden aria-label="Diğer konu">
+    <p class="hint">Ayrıntıları ön görüşmede konuşacağız; burada kısa bir seçim yeterli.</p>
+  </fieldset>
+  <fieldset>
+    <legend>Daha önce terapi aldınız mı?</legend>
+    <div class="choices">
+      <label><input type="radio" name="once" value="Evet"> Evet</label>
+      <label><input type="radio" name="once" value="Hayır"> Hayır</label>
+    </div>
+  </fieldset>
+  <label for="p-consent" class="consent"><input id="p-consent" type="checkbox" required><span><a href="/#gizlilik" target="_blank" rel="noopener">Aydınlatma metnini</a> okudum; bu formda paylaştığım bilgilerin ön görüşme talebime dönüş yapılması amacıyla işlenmesine ve bu amaçla yurt dışındaki sunuculara aktarılmasına açık rıza veriyorum.</span></label>
+  <p class="err" id="p-err" hidden>Lütfen ad soyad, telefon, e-posta, kimin için olduğu, en az bir konu ve terapi sorusunu doldurup onay kutusunu işaretleyin.</p>
+  <button class="btn" type="submit">Devam et ve saat seç</button>
+</form>
+
+<div class="done" id="done" hidden>
+  <h2>Teşekkürler, bilgileriniz iletildi.</h2>
+  <p>Şimdi son adım: takvimden size uygun saati seçin. Görüşme bağlantısı e-postanıza gelecek.</p>
+  <a class="btn" id="cal" href="https://calendar.app.google/952AbpTUD8zhTBvq5">Takvimi açın ve saat seçin</a>
+  <p class="hint" style="margin-top:14px">Takvim birkaç saniye içinde kendiliğinden açılacak.</p>
+</div>
+
+<p class="note">Online terapi acil durumlar için uygun değildir. Kendinize ya da başkasına zarar verme düşünceniz varsa 112'yi arayın ya da en yakın acil servise başvurun.</p>
+</div></main>
+<footer><div class="wrap">© 2026 Sibel Tanrıverdi · Uzman Klinik Psikolog · Bu sitedeki bilgiler tanı ya da tedavi yerine geçmez.</div></footer>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var CAL = "https://calendar.app.google/952AbpTUD8zhTBvq5";
+  var radio = function (n) { var r = document.querySelector('input[name="' + n + '"]:checked'); return r ? r.value : ""; };
+  document.querySelectorAll('input[name="yas"]').forEach(function (r) {
+    r.addEventListener("change", function () { $("minor").hidden = radio("yas").indexOf("altı") < 0; });
+  });
+  $("p-other-box").addEventListener("change", function () { $("p-other").hidden = !this.checked; if (this.checked) $("p-other").focus(); });
+  $("pre").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var v = function (id) { return $(id).value.trim(); };
+    var topics = [].map.call(document.querySelectorAll("#topics input:checked"), function (c) {
+      return c.value === "Diğer" && v("p-other") ? "Diğer: " + v("p-other") : c.value;
+    });
+    var ok = v("p-name") && v("p-phone").replace(/\D/g, "").length >= 7 && /.+@.+\..+/.test(v("p-mail")) &&
+      radio("yas") && topics.length && radio("once") && $("p-consent").checked;
+    $("p-err").hidden = !!ok;
+    if (!ok) return;
+    var data = { _subject: "Ön görüşme formu - " + v("p-name"), _template: "table", _captcha: "false",
+      ad_soyad: v("p-name"), telefon: v("p-phone"), email: v("p-mail"), ulke: v("p-country"),
+      kimin_icin: radio("yas"), destek_konusu: topics.join(", "), daha_once_terapi: radio("once"), kvkk_onayi: "evet" };
+    if (window.gtag) gtag("event", "on_gorusme_formu");
+    fetch("https://formsubmit.co/ajax/c286218f23fd2e078a5fd45912381701", {
+      method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(data), keepalive: true
+    }).catch(function () {});
+    $("pre").hidden = true; $("done").hidden = false;
+    var s = $("steps").children; s[0].className = ""; s[1].className = "on";
+    $("done").scrollIntoView({ block: "center", behavior: "smooth" });
+    setTimeout(function () { location.href = CAL; }, 4000);
+  });
+})();
+</script>
+<script src="/consent.js" defer></script>
+<script data-goatcounter="https://sibeltanriverdi.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
