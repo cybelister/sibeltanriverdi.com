@@ -90,6 +90,8 @@ button.btn { border: 0; font: inherit; font-weight: 600; cursor: pointer; justif
       <label><input type="radio" name="once" value="Hayır"> Hayır</label>
     </div>
   </fieldset>
+  <label for="p-budget">Terapi için ayırabileceğiniz seans başı bütçe <span class="opt">(isteğe bağlı)</span><input id="p-budget" type="text" maxlength="80">
+    <span class="hint">Size en uygun yönlendirmeyi yapabilmemiz için soruyoruz. Bu soruyu boş bırakabilirsiniz.</span></label>
   <label for="p-consent" class="consent"><input id="p-consent" type="checkbox" required><span><a href="/#gizlilik" target="_blank" rel="noopener">Aydınlatma metnini</a> okudum; bu formda paylaştığım bilgilerin ön görüşme talebime dönüş yapılması amacıyla işlenmesine ve bu amaçla yurt dışındaki sunuculara aktarılmasına açık rıza veriyorum.</span></label>
   <p class="err" id="p-err" hidden>Lütfen ad soyad, telefon, e-posta, kimin için olduğu, en az bir konu ve terapi sorusunu doldurup onay kutusunu işaretleyin.</p>
   <button class="btn" type="submit">Devam et ve saat seç</button>
@@ -126,7 +128,7 @@ button.btn { border: 0; font: inherit; font-weight: 600; cursor: pointer; justif
     if (!ok) return;
     var data = { _subject: "Ön görüşme formu - " + v("p-name"), _template: "table", _captcha: "false",
       ad_soyad: v("p-name"), telefon: v("p-phone"), email: v("p-mail"), ulke: v("p-country"),
-      kimin_icin: radio("yas"), destek_konusu: topics.join(", "), daha_once_terapi: radio("once"), kvkk_onayi: "evet" };
+      kimin_icin: radio("yas"), destek_konusu: topics.join(", "), daha_once_terapi: radio("once"), butce: v("p-budget"), kvkk_onayi: "evet" };
     if (window.gtag) gtag("event", "on_gorusme_formu");
     fetch("https://formsubmit.co/ajax/c286218f23fd2e078a5fd45912381701", {
       method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(data), keepalive: true
